@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="./Styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Regestration Form -->
+      <div id="regform">
+        <form class="form" id="form">
+          <p class="title">Register</p>
+          <p class="message">Signup now and get full access to our app.</p>
+          <div class="flex">
+            <label>
+              <input required="" placeholder="" type="text" class="input" id="firs_name"/>
+              <span>Firstname</span>
+            </label>
+
+            <label>
+              <input required="" placeholder="" type="text" class="input" id="last_name"/>
+              <span>Lastname</span>
+            </label>
+          </div>
+
+          <label>
+            <input required="" placeholder="" type="email" class="input" id="email" />
+            <span class="email-error">Email</span>
+          </label>
+
+          <label>
+            <input required="" placeholder="" type="password" class="input" id="password" />
+            <span>Password</span>
+          </label>
+          <label class="error-placeholder">
+            <input required=""  placeholder=""  type="password"  class="input"  id="confirm_password"/>
+            <span class="error">Confirm password</span>
+          </label>
+          <button type="submit" class="submit">Submit</button>
+          <p class="signin">
+            Already have an acount ? <a href="#" id="SwitchForm">Signin</a>
+          </p>
+        </form>
+      </div>
+
+      <!-- Login Form -->
+      <div id="loginform">
+        <form class="form" id="login-form" style="width: 450px">
+          <p class="title">Login</p>
+          <p class="message">Login to your account.</p>
+          <div class="flex" style="flex-direction: column">
+            <label>
+              <input required="" placeholder="" type="email" class="input" id="email"/>
+              <span>Email</span>
+            </label>
+            <label>
+              <input required="" placeholder="" type="password" class="input" id="password" />
+              <span>Password</span>
+            </label>
+            <button type="submit" class="submit">Login</button>
+            <p class="signin">
+              Don't have an acount ?
+              <a href="#" id="LoginSwitchForm">Signup</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./Scripts/App.js"></script>
+  </body>
+</html>
