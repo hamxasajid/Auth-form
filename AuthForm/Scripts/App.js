@@ -146,7 +146,7 @@ loginForm.addEventListener("submit", (e) => {
     // Store only the logged-in user's name
     localStorage.setItem("userName", user.firstname);
 
-    window.open("./Routs/Dashboard.html", "_blank");
+    window.location.href = "/Routs/Dashboard.html";
     loginForm.reset();
   } else {
     loginError.classList.add("shake");
