@@ -1,0 +1,53 @@
+/* Import Poppins font */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    background-color: #333;
+    display: none;
+  }
+  
+  /* Styles for Dashboard Page */
+  .dashboard-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #555;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .dashboard-container h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #89a6ff; /* Your preferred blue color */
+  }
+  
+  .dashboard-container p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-btn {
+    background: linear-gradient(45deg, #1c45c1, #00aaff);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 1s;
+  }
+  
+  .dashboard-btn:hover {
+    background: linear-gradient(45deg, #00aaff, #1c45c1);
+  }
+  

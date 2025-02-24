@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" type="image/png" href="./Assets/favicon.ico" />
+    <link rel="icon" type="image/png" href="./Assets/favicon.ico" />
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Auth-Form</title>
     <link rel="stylesheet" href="./Styles/style.css" />
   </head>
@@ -41,7 +44,7 @@
           </label>
           <button type="submit" class="submit">Submit</button>
           <p class="signin">
-            Already have an acount ? <a href="#" id="SwitchForm">Signin</a>
+            Already have an acount ? <a href="#signin" id="SwitchForm">Signin</a>
           </p>
         </form>
       </div>
@@ -53,17 +56,19 @@
           <p class="message">Login to your account.</p>
           <div class="flex" style="flex-direction: column">
             <label>
-              <input required="" placeholder="" type="email" class="input" id="email"/>
+              <input required="" placeholder="" type="email" class="input" id="Login-email" autocomplete="none"/>
               <span>Email</span>
             </label>
             <label>
-              <input required="" placeholder="" type="password" class="input" id="password" />
+              <input required="" placeholder="" type="password" class="input" id="Login-password" />
               <span>Password</span>
             </label>
+
+            <p class="login-error" id="login-error">Invalid email or password</p>
             <button type="submit" class="submit">Login</button>
             <p class="signin">
               Don't have an acount ?
-              <a href="#" id="LoginSwitchForm">Signup</a>
+              <a href="#signup" id="LoginSwitchForm">Signup</a>
             </p>
           </div>
         </form>

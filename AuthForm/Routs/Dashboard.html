@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="./Styles/style.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <h1 id="welcome-text">Welcome</h1>
+      <p>
+        This is a simple website created using HTML, CSS, and JavaScript. Feel
+        free to explore the content and make any necessary changes.
+      </p>
+
+      <button class="dashboard-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+      // Check if the user is authenticated
+      document.addEventListener("DOMContentLoaded", function () {
+        // Check if the user is authenticated
+        if (localStorage.getItem("isAuthenticated") !== "true") {
+          Swal.fire({
+            icon: "error",
+            title: "Access Denied",
+            text: "Please log in first.",
+            confirmButtonText: "OK",
+          }).then(() => {
+            window.location.href = "../index.html"; // Redirect to login page after user clicks OK
+          });
+        } else {
+          // If authenticated, show the content
+          document.body.style.display = "block";
+
+          // Retrieve the logged-in user's name from localStorage
+          let userName = localStorage.getItem("userName") || "User"; // Default to 'User' if not found
+
+          // Set the welcome text
+          document.getElementById(
+            "welcome-text"
+          ).textContent = `Welcome ${userName}`;
+        }
+      });
+
+      function logout() {
+        localStorage.removeItem("isAuthenticated"); // Remove authentication flag
+        window.location.href = "../index.html"; // Redirect to login page
+      }
+    </script>
+
+    <script src="../Scripts/App.js"></script>
+  </body>
+</html>
