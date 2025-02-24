@@ -28,10 +28,17 @@
       document.addEventListener("DOMContentLoaded", function () {
         // Check if the user is authenticated
         if (localStorage.getItem("isAuthenticated") !== "true") {
-          alert
-          window.location.href = "../index.html"; // Redirect to login page after user clicks OK
+          Swal.fire({
+            icon: "error",
+            title: "Access Denied",
+            text: "Please log in to access this page.",
+            confirmButtonText: "OK",
+          }).then(() => {
+            window.location.href = "../index.html"; // Redirect to login page after user clicks OK
+          });
+        } else {
           // If authenticated, show the content
-          document.body.style.display = "block";
+          document.querySelector(".dashboard-container").style.display = "block";
 
           // Retrieve the logged-in user's name from localStorage
           let userName = localStorage.getItem("userName") || "User"; // Default to 'User' if not found
