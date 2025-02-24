@@ -28,15 +28,8 @@
       document.addEventListener("DOMContentLoaded", function () {
         // Check if the user is authenticated
         if (localStorage.getItem("isAuthenticated") !== "true") {
-          Swal.fire({
-            icon: "error",
-            title: "Access Denied",
-            text: "Please log in first.",
-            confirmButtonText: "OK",
-          }).then(() => {
-            window.location.href = "../index.html"; // Redirect to login page after user clicks OK
-          });
-        } else {
+          alert
+          window.location.href = "../index.html"; // Redirect to login page after user clicks OK
           // If authenticated, show the content
           document.body.style.display = "block";
 
